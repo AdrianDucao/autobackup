@@ -8,8 +8,7 @@ def	doprocess(sourceFolder, targetZip):
 		for file in files:
 			print (os.path.join(subdir, file))
 			zipf.write(os.path.join(subdir, file))
-	
-	print ("Created ", targetZip)
+	print ("Success Created Zip File!", targetZip)
 		
 def	docopy(sourceFolder, targetFolder):
 	for subdir, dirs, files in os.walk(sourceFolder):
@@ -19,7 +18,7 @@ def	docopy(sourceFolder, targetFolder):
 	
 if __name__ =='__main__':
 	print ('Starting execution')
-	
+
 	sourceFolder = 'D:\\Xampp\\htdocs\\repository'
 	targetZip = 'F:\\01-Arhive\\01-backup\\2019\\dev-backup\\dev-backup.zip'
 	doprocess(sourceFolder, targetZip)	
@@ -27,4 +26,4 @@ if __name__ =='__main__':
 	targetFolder = 'F:\\01-Arhive\\02-documents\\2019'
 	docopy(sourceFolder, targetFolder)
 
-	print ('Ending execution')
+	print ('Success Backup Complete!')
